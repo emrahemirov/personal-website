@@ -1,1 +1,8 @@
-{}
+{
+  "nav-links": {
+    "me": "Ben",
+    "about": "Hakkımda",
+    "skills": "Yeteneklerim",
+    "projects": "Projelerim"
+  }
+}

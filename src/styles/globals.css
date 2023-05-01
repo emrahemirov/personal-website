@@ -10,3 +10,7 @@
   background: #26408c;
   border-radius: 7px;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,9 +1,15 @@
 import * as React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetStaticProps } from 'next/types';
+import Header from '@/components/Header';
+import { Box } from '@chakra-ui/react';
 
 const Home = () => {
-  return <></>;
+  return (
+    <Box minH={'2000px'}>
+      <Header />
+    </Box>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
