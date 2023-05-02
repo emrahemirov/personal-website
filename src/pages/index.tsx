@@ -3,14 +3,15 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetStaticProps } from 'next/types';
 import Header from '@/components/Header';
 import Me from '@/components/Me';
-import { Box } from '@chakra-ui/react';
+import Skills from '@/components/Skills';
 
 const Home = () => {
   return (
-    <Box minH={'2000px'}>
+    <>
       <Header />
       <Me />
-    </Box>
+      <Skills />
+    </>
   );
 };
 
