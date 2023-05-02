@@ -16,6 +16,7 @@ import ChangeLang from './ChangeLang';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import { useTranslation } from 'next-i18next';
+import ToggleColorMode from './ToggleColorMode';
 
 const Header = () => {
   const { t } = useTranslation('common');
@@ -81,7 +82,8 @@ const Header = () => {
           </Flex>
 
           <Flex gap={2}>
-            <ChangeLang />
+            <ChangeLang isScrolled={isScrolled} />
+            <ToggleColorMode isScrolled={isScrolled} />
             <IconButton
               color={isScrolled ? 'secondary.500' : 'white'}
               display={{ base: 'flex', md: 'none' }}
@@ -90,7 +92,7 @@ const Header = () => {
               variant='ghost'
               aria-label='menu-open'
               colorScheme={isScrolled ? 'secondary' : 'whiteAlpha'}
-              icon={<BiMenu size={20} />}
+              icon={<Box as={BiMenu} fontSize={{ base: 16, sm: 20 }} />}
               onClick={onOpen}
             />
           </Flex>

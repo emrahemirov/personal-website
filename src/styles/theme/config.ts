@@ -1,5 +1,5 @@
 export const config = {
-  initialColorMode: 'light',
-  useSystemColorMode: false,
+  initialColorMode: 'dark',
+  useSystemColorMode: true,
   cssVarPrefix: 'pw',
 };

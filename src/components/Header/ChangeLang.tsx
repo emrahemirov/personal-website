@@ -11,13 +11,13 @@ import {
 import { IoLanguage } from 'react-icons/io5';
 import { useRouter } from 'next/router';
 import { langs } from '@/utils/constants';
-import { useScrollPosition } from '@/hooks';
 
-const ChangeLang = () => {
+interface ChangeLangProps {
+  isScrolled: boolean;
+}
+
+const ChangeLang: React.FC<ChangeLangProps> = ({ isScrolled }) => {
   const router = useRouter();
-
-  const scrollPosition = useScrollPosition();
-  const isScrolled = scrollPosition > 50;
 
   return (
     <>
@@ -27,8 +27,8 @@ const ChangeLang = () => {
           rounded='full'
           as={IconButton}
           colorScheme={isScrolled ? 'secondary' : 'whiteAlpha'}
-          aria-label='lang'
-          icon={<IoLanguage size={20} />}
+          aria-label='language'
+          icon={<Box as={IoLanguage} fontSize={{ base: 16, sm: 20 }} />}
           size='sm'
           variant='ghost'
         />
