@@ -11,10 +11,10 @@ import {
   IconButton,
   Button,
 } from '@chakra-ui/react';
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { navLinks } from '@/utils/constants';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -36,7 +36,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) => {
             variant='link'
             aria-label='menu-close'
             colorScheme='secondary'
-            icon={<AiFillCloseCircle size={20} />}
+            icon={<AiOutlineCloseCircle size={24} />}
             onClick={onClose}
           />
         </DrawerHeader>
@@ -51,7 +51,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) => {
             >
               Emrah Emirov
             </Text>
-            <Stack>
+            <Stack as='nav'>
               {navLinks.map((navLink) => (
                 <Link href={navLink.href} key={navLink.href}>
                   <Button

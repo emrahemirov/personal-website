@@ -1,8 +1,13 @@
 {
   "nav-links": {
-    "me": "Me",
-    "about": "About",
+    "me": "I'm",
     "skills": "Skills",
     "projects": "Projects"
+  },
+  "me": {
+    "heading": "I'm Emrah Emirov",
+    "description": "I am a software engineer. I am studying at Manisa Celal Bayar University. I generally develop Node.js based applications. I use React.js for frontend development and Node.js (express) for backend development. I am actively developing applications with translation in different languages and role-based authentication available. I like to take part in projects that will constantly improve myself and to research the necessary code flows while developing a project.",
+    "contact": "Contact me",
+    "projects": "My projects"
   }
 }

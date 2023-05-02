@@ -1,4 +1,4 @@
-import { theme } from '@/styles/theme';
+import { colorModeLocalKey, theme } from '@/styles/theme';
 import { ColorModeScript } from '@chakra-ui/react';
 import { Html, Head, Main, NextScript } from 'next/document';
 
@@ -7,7 +7,10 @@ const Document = () => {
     <Html>
       <Head />
       <body>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <ColorModeScript
+          initialColorMode={theme.config.initialColorMode}
+          storageKey={colorModeLocalKey}
+        />
         <Main />
         <NextScript />
       </body>

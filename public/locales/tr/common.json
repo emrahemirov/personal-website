@@ -1,8 +1,13 @@
 {
   "nav-links": {
     "me": "Ben",
-    "about": "Hakkımda",
     "skills": "Yeteneklerim",
+    "projects": "Projelerim"
+  },
+  "me": {
+    "heading": "Ben Emrah Emirov",
+    "description": "Yazılım mühendisiyim. Manisa Celal Bayar Üniversitesi'nde öğrenim görmekteyim. Genel olarak Node.js tabanlı uygulamalar geliştirmekteyim. Ön yüz geliştirme için React.js, arka yüz geliştirme için Node.js (express) kullanmaktayım. Aktif olarak farklı dillerde çevirisi olan, rol tabanlı kimlik doğrulaması mevcut uygulamalar geliştirmekteyim. Kendimi sürekli geliştirecek projelerde yer almayı ve proje geliştirirken gerekli kod akışlarını araştırmayı severim.",
+    "contact": "İletişime geç",
     "projects": "Projelerim"
   }
 }

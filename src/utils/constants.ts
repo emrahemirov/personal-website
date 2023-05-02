@@ -1,13 +1,11 @@
 import { TR, US } from 'country-flag-icons/react/3x2';
 
 export const navLinks = [
-  { label: 'nav-links.me', href: '#me', matches: /#me/ },
-  { label: 'nav-links.about', href: '#about', matches: /#about/ },
-  { label: 'nav-links.skills', href: '#skills', matches: /#skills/ },
+  { label: 'nav-links.me', href: '#me' },
+  { label: 'nav-links.skills', href: '#skills' },
   {
     label: 'nav-links.projects',
     href: '#projects',
-    matches: /#projects/,
   },
 ];
 

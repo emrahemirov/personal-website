@@ -17,19 +17,20 @@ const ChangeLang = () => {
   const router = useRouter();
 
   const scrollPosition = useScrollPosition();
-  const isScrolled = scrollPosition > 150;
+  const isScrolled = scrollPosition > 50;
 
   return (
     <>
       <Menu>
         <MenuButton
+          color={isScrolled ? 'secondary.500' : 'white'}
           rounded='full'
           as={IconButton}
           colorScheme={isScrolled ? 'secondary' : 'whiteAlpha'}
           aria-label='lang'
-          icon={<IoLanguage />}
+          icon={<IoLanguage size={20} />}
           size='sm'
-          variant='outline'
+          variant='ghost'
         />
         <MenuList minW={'fit-content'} p={1}>
           {Object.keys(langs).map((key) => {

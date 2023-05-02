@@ -6,6 +6,7 @@ import {
   IconButton,
   Text,
   Button,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { BiMenu } from 'react-icons/bi';
@@ -14,26 +15,34 @@ import MobileDrawer from './MobileDrawer';
 import ChangeLang from './ChangeLang';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 const Header = () => {
   const { t } = useTranslation('common');
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const scrollPosition = useScrollPosition();
-  const isScrolled = scrollPosition > 150;
+  const isScrolled = scrollPosition > 50;
+
+  const bgColor = useColorModeValue('white', '#1A202C');
+  const boxShadow = useColorModeValue(
+    'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+    'rgba(228, 228, 228, 0.2) 0px 2px 8px 0px',
+  );
 
   return (
     <>
       <Box
-        bgColor={isScrolled ? 'white' : 'primary.500'}
-        position='fixed'
+        zIndex={10}
+        as='header'
+        bgColor={isScrolled ? bgColor : 'primary.500'}
+        position='sticky'
         top={0}
         w='full'
-        shadow={'md'}
+        boxShadow={boxShadow}
       >
         <Container
-          transition='padding 300ms ease'
+          transition='padding 100ms ease'
           py={isScrolled ? 2 : 4}
           maxW='7xl'
           display='flex'
@@ -49,7 +58,12 @@ const Header = () => {
           >
             Emrah Emirov
           </Text>
-          <Flex align='center' gap={4} display={{ base: 'none', md: 'flex' }}>
+          <Flex
+            as='nav'
+            align='center'
+            gap={4}
+            display={{ base: 'none', md: 'flex' }}
+          >
             {navLinks.map((navLink) => (
               <Link href={navLink.href} key={navLink.href}>
                 <Button
@@ -58,6 +72,7 @@ const Header = () => {
                   size='sm'
                   variant='ghost'
                   colorScheme={isScrolled ? 'primary' : 'whiteAlpha'}
+                  color={isScrolled ? 'primary.500' : 'white'}
                 >
                   {t(navLink.label)}
                 </Button>
@@ -68,6 +83,7 @@ const Header = () => {
           <Flex gap={2}>
             <ChangeLang />
             <IconButton
+              color={isScrolled ? 'secondary.500' : 'white'}
               display={{ base: 'flex', md: 'none' }}
               rounded='full'
               size='sm'
