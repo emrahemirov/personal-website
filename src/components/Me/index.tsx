@@ -12,6 +12,7 @@ import Wave from './Wave';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { emrahImg } from '@/assets/images';
+import Link from 'next/link';
 
 const Me = () => {
   const { t } = useTranslation('common');
@@ -38,17 +39,27 @@ const Me = () => {
             {t('me.description')}
           </Text>
           <Flex gap={2}>
-            <Button colorScheme='secondary' size='sm'>
-              {t('me.contact')}
-            </Button>
-            <Button colorScheme='secondary' size='sm' variant='ghost'>
-              {t('me.projects')}
-            </Button>
+            <Link href='mailto:e4emirov@gmail.com'>
+              <Button colorScheme='secondary' size='sm'>
+                {t('me.contact')}
+              </Button>
+            </Link>
+            <Link href='#projects'>
+              <Button colorScheme='secondary' size='sm' variant='ghost'>
+                {t('me.projects')}
+              </Button>
+            </Link>
           </Flex>
         </Stack>
         <Box position='relative' fontSize={{ base: '300px', sm: '500px' }}>
           <Wave />
-          <Image src={emrahImg} quality={100} fill alt='emrah' />
+          <Image
+            style={{ marginTop: '-30px' }}
+            src={emrahImg}
+            quality={100}
+            fill
+            alt='emrah'
+          />
         </Box>
       </Container>
     </Box>

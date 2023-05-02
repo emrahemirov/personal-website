@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  Heading,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
-import * as React from 'react';
+import { Container, Flex, Stack, Text } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 
@@ -25,16 +16,18 @@ const mostlyUseSkillImages = [
   'ts',
 ];
 
-const hadUsedSkillImages = ['nodejs', 'nestjs', 'postgres', 'mongo'];
+const hadUsedSkillImages = ['nodejs', 'express', 'postgres', 'mongo'];
 
 const Skills = () => {
   const { t } = useTranslation('common');
 
   return (
-    <Flex py={32} id='skills' as='section' bgColor='primary.500'>
+    <Flex py={20} id='skills' as='section' bgColor='primary.500'>
       <Container as={Stack} align='center' maxW='7xl' spacing={8}>
         <Stack align='center' spacing={4}>
-          <Heading>{t('skills.mostly-use')}</Heading>
+          <Text fontWeight='semibold' fontSize='xl'>
+            {t('skills.mostly-use')}
+          </Text>
           <Flex align='center' justify='center' gap={4} flexWrap='wrap'>
             {mostlyUseSkillImages.map((skillImage, index) => (
               <Image
@@ -55,7 +48,9 @@ const Skills = () => {
           </Flex>
         </Stack>
         <Stack align='center' spacing={4}>
-          <Heading>{t('skills.had-used')}</Heading>
+          <Text fontWeight='semibold' fontSize='xl'>
+            {t('skills.use')}
+          </Text>
           <Flex align='center' justify='center' gap={4} flexWrap='wrap'>
             {hadUsedSkillImages.map((skillImage, index) => (
               <Image

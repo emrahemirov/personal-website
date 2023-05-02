@@ -10,5 +10,11 @@
     "contact": "Contact me",
     "projects": "My projects"
   },
-  "skills": { "mostly-use": "Mostly I use", "had-used": "I had used" }
+  "skills": { "mostly-use": "Mostly I use", "use": "I use" },
+  "projects": {
+    "heading": "My projects",
+    "web3": "Web3 wallet authentication",
+    "responsive": "Responsive design",
+    "language": "Multi language support "
+  }
 }

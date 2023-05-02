@@ -12,6 +12,12 @@
   },
   "skills": {
     "mostly-use": "Çoğunlukla kullanırım",
-    "had-used": "Kullanmıştım"
+    "use": "Kullanıyorum"
+  },
+  "projects": {
+    "heading": "Projelerim",
+    "web3": "Web3 cüzdan doğrulama",
+    "responsive": "Duyarlı tasarım",
+    "language": "Çoklu dil desteği"
   }
 }
